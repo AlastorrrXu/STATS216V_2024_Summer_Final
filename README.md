@@ -24,8 +24,9 @@ In the early stages of the project, we experimented with several machine learnin
 - **Decision Trees**
 - **Random Forests**
 - **Neural Networks (NN)**
+- **Naive Bayes**
 
-Through these trials, we determined that the Neural Network and Random Forest models performed the best. As a result, we focused on these two models, aiming to achieve further improvements through enhanced feature engineering and hyperparameter tuning.
+Through these trials, we determined that the Neural Network and Random Forest models performed the best. Although we also experimented with **Naive Bayes** and a **hard voting** ensemble method (combining predictions from multiple models), these approaches did not perform well. The hard voting method, in particular, struggled due to the three possible prediction outcomes, which resulted in suboptimal final predictions.
 
 ### 4. Feature Engineering and Hyperparameter Tuning
 
@@ -68,10 +69,42 @@ The final models used for prediction were:
 
 These models were chosen for their superior performance during cross-validation, particularly in balancing accuracy across different genders and political affiliations.
 
+## Project Files Overview
+
+### 1. `CAH-201803-predictions-combined-gender.csv`
+This file contains the final predictions after combining the results from the Neural Network and Random Forest models for both genders. The predictions are based on the best-performing models identified during the project.
+
+### 2. `CAH-201803-predictions-nn-bs128-ep100-lr0.0001-dr0.7.csv`
+This file contains the predictions made by the best-performing Neural Network model with the specified hyperparameters (`batch_size=128`, `epochs=100`, `learning_rate=0.0001`, `dropout_rate=0.7`).
+
+### 3. `CAH-201803-predictions-rf-n100-md10-ms2-ml1-mflog2.csv`
+This file contains the predictions made by the best-performing Random Forest model with the specified hyperparameters (`n_estimators=100`, `max_depth=10`, `min_samples_split=2`, `min_samples_leaf=1`, `max_features='log2'`).
+
+### 4. `into_numerical.py`
+This script is used to convert qualitative (categorical) data into numerical features suitable for machine learning models. It handles the encoding of categorical variables in the dataset.
+
+### 5. `merge_2.py`
+This script is used to merge the predictions from the Neural Network and Random Forest models into a single file. It takes the outputs from the individual model predictions and combines them into a final, comprehensive prediction file.
+
+### 6. `nn_try_13.py`
+This script contains the implementation of the Neural Network model, including the feature engineering, model training, and hyperparameter tuning processes.
+
+### 7. `random_forest_try_4.py`
+This script contains the implementation of the Random Forest model, including the feature selection, model training, and hyperparameter tuning processes.
+
+### 8. `Codes for Other Models I tried.zip`
+This zip file contains the code for other models we attempted during the project, including:
+
+- **Naive Bayes**
+- **Hard Voting Ensemble**
+- **Logistic Regression**
+- **K-Nearest Neighbors (KNN)**
+- **Decision Trees**
+
+These models were part of our initial trials but did not perform as well as the final selected models. The code in this zip file provides insight into our experimentation process and the methods we tested before arriving at the final models.
+
 ## Conclusion
 
 The project culminated in a robust prediction model that effectively balances accuracy across different political affiliations and genders. The combination of Neural Networks and Random Forests, supported by extensive feature engineering and hyperparameter tuning, provided the best predictive performance.
 
----
 
-This README provides a comprehensive overview of the steps taken during the project, the decisions made, and the results achieved. It is designed to give a clear understanding of the entire modeling process and the rationale behind the final model selection.
