@@ -27,7 +27,9 @@ In the early stages of the project, we experimented with several machine learnin
 - **Neural Networks (NN)**
 - **Naive Bayes**
 
-Through these trials, we determined that the Neural Network and Random Forest models performed the best. Although we also experimented with **Naive Bayes** and a **hard voting** ensemble method (combining predictions from multiple models), these approaches did not perform well. The hard voting method, in particular, struggled due to the three possible prediction outcomes, which resulted in suboptimal final predictions.
+Through these trials, we determined that the Neural Network and Random Forest models performed the best. 
+
+Initially, I was determined to use some common hard voting combinations. Although we also experimented with **Naive Bayes**, **Neural Network** , **KNN** and a **hard voting** ensemble method (I also combined other predictions from multiple models), these approaches did not perform well. The hard voting method, in particular, struggled probably due to the three possible prediction outcomes, which resulted in final predictions with even lower accuracy on the training data. Limited with only two attempts, I didn't dare to submit this result. Instead, I decided to try other approaches which would be more reliable for me.
 
 ### 4. Feature Engineering and Hyperparameter Tuning
 
