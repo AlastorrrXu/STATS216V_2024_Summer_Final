@@ -13,6 +13,7 @@ The original dataset contained a large amount of qualitative data, such as categ
 ### 2. Gender-Based Data Separation
 
 Upon initial analysis, we observed significant differences in the political affiliation distribution between genders. This prompted us to consider separating the data by gender and modeling them independently. However, during the modeling process, we found that this approach did not yield satisfactory results, likely due to the smaller sample size within each gender subgroup. Consequently, we reverted to processing and modeling the entire dataset as a whole.
+![Political Affiliation by Gender](political_affiliation_by_gender.png)
 
 ### 3. Initial Model Trials
 
