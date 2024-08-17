@@ -5,7 +5,7 @@ gender_info_file = r'D:\Users\Alastor\Desktop\STAT216\STAT216V\Final\CAH-201803-
 gender_df = pd.read_csv(gender_info_file)
 
 # 性别列的名称
-gender_column = 'Q1'  # 根据你提供的截图，性别信息在 Q1 列
+gender_column = 'Q1' 
 
 # 加载预测数据
 male_predictions_file = r'D:\Users\Alastor\Desktop\STAT216\STAT216V\Final\CAH-201803-predictions-nn-bs128-ep100-lr0.0001-dr0.7.csv'
